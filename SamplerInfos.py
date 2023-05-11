@@ -1,5 +1,6 @@
 import unreal
 
+# Define a dictionary of sampler info for each texture map
 sampler_infos = {
     'BaseColor': {
         'sampler_type': unreal.MaterialSamplerType.SAMPLERTYPE_COLOR,

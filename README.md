@@ -6,6 +6,34 @@ The Unreal Engine Material Generator plugin is a powerful plugin designed to str
 
 The installation process is straightforward and well-documented, and the plugin is easy to use once installed. Overall, the Unreal Engine Material Generator is a must-have tool for any Unreal Engine 5 user looking to streamline their material creation process.
 
+## Requisite Software
+
+Before using the Unreal Engine Material Generator plugin, please ensure that you have the following software installed and configured properly:
+
+1. [Unreal Engine 5](https://www.unrealengine.com/en-US/download): The plugin is designed for use with Unreal Engine 5, version 5.0.3 or later.
+
+2. [Adobe Substance 3D Painter](https://www.adobe.com/products/substance3d-painter.html?sdid=GMCWY78R&mv=search&gclid=Cj0KCQjwpPKiBhDvARIsACn-gzC6efhhXcaHAYtH7KDOj_kc4v7UqH_Kj-DaaivWNpIbnSt1sZiCCOkaAuE-EALw_wcB): To create and export texture maps for material generation, you'll need Adobe Substance 3D Painter version 8.1.1 or later.
+
+## Requisite Packages
+
+In addition to the software mentioned above, if you desire to run the test file, please make sure that you have the following packages installed and configured properly:
+
+1. **pytest**: The pytest package is required to run the tests for the Unreal Engine Material Generator plugin. Install pytest using pip by running the following command in your command-line interface:
+
+```
+pip install pytest
+```
+
+2. **pytest-mock**: The pytest-mock package is an extension for pytest that provides support for mocking and patching objects during tests. Install pytest-mock using pip by running the following command:
+
+```
+pip install pytest-mock
+```
+
+Please ensure that you have Unreal Engine 5 and Adobe Substance 3D Painter installed and configured properly as the necessary software, and install pytest and pytest-mock as the required packages for running tests.
+
+It is also recommended to have **Python 3.5** or above installed on your system to run the tests.
+
 ## Installation
 
 1. Clone this github repository.
@@ -58,8 +86,9 @@ Once the plugin is installed, you can use it to automatically generate materials
 3. Select all the maps you want to use to generate materials from.
 4. Right-click on the selected maps.
 5. From the context menu select Scripted Asset Actions > Material Tool > Create Material From Selected Textures.
-6. The plugin will automatically generate all the materials for you.
 ![My Image6](Images/Img6.PNG)
+6. The plugin will automatically generate all the materials for you.
+![My Image7](Images/Img7.PNG)
 
 Please note that this plugin currently only supports a limited number of maps from Substance Painter. These maps include:
 
@@ -68,6 +97,11 @@ Please note that this plugin currently only supports a limited number of maps fr
 - Ambient Occlusion
 - Metallic
 - Roughness
+
+## Video - Installation and usage process:
+
+Watch the video by clicking the image below:
+[![Watch the video](Images/Img7.PNG)](https://youtu.be/ui24s2w5u70)
 
 ## References
 

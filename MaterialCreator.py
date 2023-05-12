@@ -11,14 +11,11 @@ def get_material_name(texture_path: str) -> str:
     Returns:
         A string representing the material name.
     """
-    try:
-        last_dot_index = texture_path.rfind('.')
-        new_texture_path = texture_path[:last_dot_index]
-        last_underscore_index = new_texture_path.rfind('_')
-        name = texture_path[:last_underscore_index]
-        return name
-    except Exception as e:
-        raise ValueError(f"Error defining material name. {e}")
+    last_dot_index = texture_path.rfind('.')
+    new_texture_path = texture_path[:last_dot_index]
+    last_underscore_index = new_texture_path.rfind('_')
+    name = texture_path[:last_underscore_index]
+    return name
 
 def create_sampler(material: unreal.Material, texture_name: str, sampler_y_pos: float) -> None:
     """
@@ -63,9 +60,9 @@ def create_empty_material_asset(name: str) -> unreal.Material:
         An instance of unreal.Material representing the newly created material asset.
     """
     asset_tools = unreal.AssetToolsHelpers.get_asset_tools()
-    out_package_name, out_asset_name = asset_tools.create_unique_asset_name(name, '')
-    package_path = out_package_name.rsplit('/', 1)[0]
-    asset_name = out_package_name.rsplit('/', 1)[1]
+    out_package_name = asset_tools.create_unique_asset_name(name, '')
+    package_path = out_package_name[0].rsplit('/', 1)[0]
+    asset_name = out_package_name[0].rsplit('/', 1)[1]
     return asset_tools.create_asset(asset_name, package_path, unreal.Material, unreal.MaterialFactoryNew())
 
 # @brief creates semplers in material blueprint
